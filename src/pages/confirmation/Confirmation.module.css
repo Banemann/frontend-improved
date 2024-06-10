@@ -1,0 +1,123 @@
+.main {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a6a, #ffd700, #00bfff, #1e90ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 35s ease infinite; 
+  }
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.contentBox {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contentBox h2 {
+  font-size: 1.7rem;
+}
+
+.orderBox {
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 2% 5%;
+  margin: 4% 20%;  
+  text-align: left;
+}
+  
+.orderBox h2 {
+  text-align: center;
+  margin: 0 0 5% 0;
+}
+
+.orderBox h3 {
+  text-align: center;
+  margin: 0 0 2% 0;
+  font-size: 1.5rem;
+}
+
+.orderBox p {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  border-bottom: solid 1px rgb(219, 219, 219);
+  padding: 1% 0;
+  
+}
+
+.orderBox span {
+  font-size: 1.4rem;
+}
+
+.orderBox .orderDetails {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.orderBox .orderDetails::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #ccc;
+}
+
+.orderBox .orderItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.orderBox .orderItem span {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.orderBox .orderItem span.text {
+  text-align: left;
+}
+
+.orderBox .orderItem span.value {
+  text-align: right;
+}
+
+.total{
+  text-decoration: underline;
+}
+
+.approveButton {
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  background-color: rgb(70, 70, 70);
+  border-style: none;
+  border-radius: 5px;    
+  color: rgb(255, 255, 255);
+  font-size: 1.4em;
+  cursor: pointer;
+  margin: 3% 0 5% 0;
+}
+
+.approveButton:hover {
+  background-color: rgb(30, 187, 16);
+}
+
+.btnBox {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .orderBox {
+    margin: 4% 5%;
+  }
+}

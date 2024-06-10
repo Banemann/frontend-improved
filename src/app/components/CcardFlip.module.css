@@ -1,0 +1,52 @@
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#999999;
+    padding: 3%;
+    margin: 2% 25%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.inputBox input{
+    width: 100%;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.nextTo {
+    display: flex;
+    width: 108%;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .inputBox{
+        margin: 5%;
+    }
+
+    .inputBox input{
+        text-align: center;
+    }
+
+    .nextTo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    
+    }  
+}
+
+@media screen and (max-width: 650px) {
+    .inputBox input{
+        padding: 5% 0;
+    }  
+}
+
+

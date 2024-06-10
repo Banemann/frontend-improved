@@ -1,0 +1,38 @@
+.main{
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a6a, #ffd700, #00bfff, #1e90ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 35s ease infinite; 
+  height: 98vh;
+  }
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+  .contentBox {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1275px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .leftContent {
+    width: 50%;
+    margin-top: 5%;
+    font-size: 1.2rem;
+  }
+  
+  .rightContent {
+    width: 50%;
+    margin-top: 11%;
+    font-size: 1.3rem;
+  }
+  
+  .logoContainer {
+    margin-bottom: 20px;
+  }
+  

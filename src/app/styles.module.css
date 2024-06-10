@@ -1,0 +1,274 @@
+@font-face {
+  font-family: 'TeenageGonabe';
+  src: url('/fonts/TeenageGonabe.woff2') format('woff2'),
+       url('/fonts/TeenageGonabe.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} 
+
+@font-face {
+  font-family: 'rubik';
+  src: url('/fonts/rubik.woff2') format('woff2'),
+       url('/fonts/rubik.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.contentContainer {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a6a, #ffd700, #00bfff, #1e90ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 35s ease infinite; 
+  }
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login{
+  position: relative;
+  left: 40vw;
+  bottom: 10vh;
+  font-size: 1.2rem;
+  padding: 1%;
+  border-radius: 45%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login:hover{
+  background-color: #ffd700;
+  color: #000000;
+}
+
+.contentBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentBox h1 {
+  font-size: 5rem;
+  font-family: "rubik";
+  color: #ff6a6a;
+  text-shadow: 2px 2px 1px #000000;
+  margin-top: 10%;
+  font-weight: 600;
+}
+
+.navList {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.link {
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.link img {
+  width: 100vw; 
+  height: 70vh; 
+  object-fit: cover; 
+  filter: brightness(0.6); 
+  transition: filter 0.5s;
+  mask-image: linear-gradient(to bottom, transparent, transparent 1%, black 50%, black 70%, transparent 90%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, transparent 1%, black 10%, black 80%, transparent 90%, transparent);
+}
+
+.link:hover img {
+  filter: brightness(1); 
+}
+
+.link span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 5rem;
+  font-weight: bold;
+  transition: opacity 0.3s;
+  font-family: "TeenageGonabe"; 
+}
+
+.link:hover span {
+  opacity: 1;
+  color: black;
+}
+
+.bandBox{
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 12.5%;
+  margin: 4%;
+}
+
+.bandCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6a6a;
+  color: white;
+  padding: 1%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  width: 250px;
+}
+
+.bandCard:hover {
+  background-color: #ffd700;
+  color: black;
+}
+
+.bandCard:hover img {
+  transform: scale(1.05); 
+}
+
+.bandCard h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+.imgBox{
+  height: 200px;
+  width: 200px;
+}
+
+.bandCard img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: fill;
+}
+
+.allBandsBtn {
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 200px;
+  height: 80px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #ffd700;
+  color: #000000;
+  margin-bottom: 50%;
+}
+
+.allBandsBtn:hover {
+  background-color: #ff6a6a;
+  color: white;
+}
+
+.loadingScreen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 4rem;
+       font-family: "TeenageGonabe";
+}
+
+@media screen and (max-width: 1500px) {
+  .bandBox{
+    gap: 5%;
+  }
+  
+ 
+ }
+
+@media screen and (max-width: 1000px) {
+  .contentBox h1 {
+    font-size: 3rem;
+    margin: 5% 0;
+  }
+
+  .navList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link img {
+    height: 50vh;
+  }
+
+  .link span {
+    font-size: 3rem;
+  }
+
+  .bandBox {
+    padding: 3% 5%;
+  }
+
+  .bandCard {
+    width: 200px;
+  }
+
+  .imgBox {
+    height: 150px;
+    width: 150px;
+  }
+
+  .bandCard h2 {
+    font-size: 1.1rem;
+    margin-top: 3%;
+  }
+
+  .allBandsBtn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    margin-bottom: 30%;
+  }
+
+  .contentContainer {
+    background-size: 200% 200%;
+  }
+  
+  .loadingScreen {
+    font-size: 3rem;
+  }
+
+  .allBandsBtn{
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+ .bandBox{
+  display: flex;
+  flex-direction: column; 
+}
+
+.bandCard img{
+  width: 150%;
+  
+}
+
+.bandCard{
+  width: 50%;
+  margin: 4% 0;
+  padding: 2% 0;
+}
+
+
+
+}

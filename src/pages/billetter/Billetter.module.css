@@ -1,0 +1,218 @@
+.main{
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a6a, #ffd700, #00bfff, #1e90ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 35s ease infinite;  
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.formBox {
+  width: 100%;
+  max-width: 1275px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+
+.formBox h1 {
+  font-size: 2.8rem;
+  margin-top: 7%;
+  margin-bottom: 4%;
+  color: #ffcc00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.cardBox{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  gap: 8%;
+}
+
+.ticketCard {
+  background-color: rgba(255, 255, 255, 0.625);
+  border-radius: 8px;
+  padding: 3% 40% 10% 40%;
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 18%;
+}
+
+.ticketCard input{
+   font-size: 1rem;
+  height: 50px;
+  width: 70px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 0 65px;
+}
+
+.ticketCard h2 {
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ticketCard h3{
+  font-size: 3rem;
+}
+
+.campingAreabox{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  gap: 5%;
+  margin-top: 3%;
+  margin-bottom: 8%;
+}
+
+.campingAreaBtn{
+  background-color: rgba(255, 255, 255, 0.625);
+  border-radius: 8px;
+  width: 250px;
+  padding: 2.2% 0;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+}
+
+.campingAreaBtn:hover{
+  cursor: pointer;
+  box-shadow: #525252 0px 0px 10px;
+}
+
+.selected {
+  box-shadow: #525252 0px 0px 10px;
+  transform: scale(1.05);
+}
+
+.unavailable.unavailable:parent {
+  background-color: whitesmoke;
+}
+
+.spotsLeft {
+  margin-top: 10%;
+  font-size: 1rem;
+  color: #ff0000;
+  margin: 0;
+  padding: 0;
+}
+
+.ticketCounter {
+  font-size: 1rem;
+}
+
+.campingOptionsBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  font-size: 1.5rem;
+}
+
+.campingOptions h2 {
+  font-size: 2rem;
+}
+
+.greenCampingBox{
+ display: flex;
+ flex-direction: column;
+ font-size: 1.5rem;
+ align-items: center;
+ width: 20%;
+ margin: 3% auto;
+}
+
+.greenCampingBox input{
+  transform: scale(3);
+  margin: 10%;
+  width: 20px;
+}
+
+.campingTelt{
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+}
+
+.campingTelt input{
+  font-size: 1rem;
+  width: 70px;
+  height: 50px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.nextBtn {
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 200px;
+  height: 80px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #ffd700;
+  color: #000000;
+  margin-bottom: 2%;
+  margin-top: 10%;
+}
+
+.nextBtn:hover {
+  background-color: #ff6a6a;
+  color: white;
+}
+
+
+@media screen and (max-width: 1325px) {
+ .campingAreabox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .campingOptionsBox{
+  display: flex;
+  flex-direction: column; 
+ }
+
+ .campingAreaBtn{
+  padding: 8% 5%;
+  margin-bottom: 5%;
+ }
+
+  .greenCampingBox{
+    width: 100%;
+    margin: 3% auto;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .cardBox{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .ticketCard {
+    padding: 2% 0 6% 0;
+    margin: 4% 0;
+  }
+}

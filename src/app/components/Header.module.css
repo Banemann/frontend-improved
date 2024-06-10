@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'rubik';
+  src: url('/fonts/rubik.woff2') format('woff2'),
+       url('/fonts/rubik.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5% 0;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1275px;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  margin: 0 15px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.link:hover {
+  color: #f1c40f;
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-family: 'rubik';
+  color: #ff6a6a;
+  text-shadow: 2px 2px 1px #000000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.active {
+  color: #f1c40f;
+  text-decoration: underline;
+}
+
+.link a {
+  text-decoration: none;
+  color: white;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .link {
+    font-size: 1.3rem;
+    margin: 0 10px;
+  }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1% 0;
+    display: flex;
+  }
+
+  .navContainer {
+    flex-direction: column;   
+  }
+
+  .nav {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .navList {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    
+  }
+
+  .link {
+    margin: 15% 0;
+    font-size: 1.5rem;
+  }
+}
+
+

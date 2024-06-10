@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'TeenageGonabe';
+    src: url('/fonts/TeenageGonabe.woff2') format('woff2'),
+         url('/fonts/TeenageGonabe.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.contentContainer {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a6a, #ffd700, #00bfff, #1e90ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 35s ease infinite;  
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.contentBox {
+    width: 100%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    max-width: 1275px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.contentBox h1 {
+    font-size: 2.8rem;
+    margin-top: 7%;
+    margin-bottom: 8%;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+
+.filterBox,
+.sceneprogramBox {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #e0e0e09f;
+}
+
+.filterBox div {
+  width: 100%;
+}
+
+.filterBox {
+    text-align: center;
+    margin: 5% 0;
+}
+
+.filterBox h2 {
+  display: inline-block;
+  margin: 0 50px;
+  padding: 2%;
+  transition: 0.3s ease;
+  border-radius: 50%;
+}
+
+.filterBox h2:hover {
+    color: #00bfff;
+    cursor: pointer;
+}
+
+.sceneprogramBox {
+    flex-direction: column;
+}
+
+.Sceneh2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #00bfff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Dayschedule {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.Dayschedule h3 {
+    font-size: 1.25rem;
+    color: black;
+}
+
+.Bandtid {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    color: black;
+    border-radius: 50px;
+    padding: 1%;
+    box-shadow: #00bfff 0px 0px 10px;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.aWidth_last-child {
+    width: 50px;
+}
+
+.Bandtid p {
+    margin: 0;
+    padding: 0;
+    padding: 0 3%;
+    font-size: 1.2rem;
+}
+
+.Bandtid p:first-child {
+    font-weight: bolder;
+}
+
+.Bandtid p:last-child {
+    color: #ffffff;
+}
+
+.linkA{
+    text-decoration: none;
+}
+
+.linkA:hover p:last-child {
+    color: #00bfff;
+    font-weight: bolder;
+}
+
+
+.loadingScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 4rem;
+         font-family: "TeenageGonabe";
+  }
+
+
+  @media screen and (max-width: 1000px) {
+    
+    .Bandtid {
+      width: 70%;
+      margin-top: 3%;
+      padding: 2%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    
+    .Bandtid {
+      width: 85%;
+    }
+  }
+  
