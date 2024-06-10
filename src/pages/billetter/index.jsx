@@ -57,7 +57,7 @@ function Booking() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevents the default form submission (hjælp af ChatGPT)
+    e.preventDefault();
 
     const totalTickets = regularTicketCount + vipTicketCount;
     const totalTentCapacity = tents.twoPerson * 2 + tents.threePerson * 3;
@@ -76,6 +76,12 @@ function Booking() {
       alert("Manglende telt-plads.");
       return;
     }
+
+    // const selectedSpotData = availableSpots[selectedSpotIndex]; if (selectedSpotData && totalTickets > selectedSpotData.available) { alert("Ikke nok pladser til rådighed"); return; }
+     
+     
+   
+   
 
     if (selectedSpot) {
       try {
