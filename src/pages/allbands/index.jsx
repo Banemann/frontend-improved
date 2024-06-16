@@ -59,6 +59,10 @@ function AllBands() {
               </Link>
             ))}
         </div>
+        <Link href="/billetter">
+<button type="submit" className={styles.billetBtn}>
+          Gå til billetter
+        </button></Link>
       </div>
       <Footer />
     </main>

@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./Bandname.module.css";
 import Header from "../../app/components/Header";
-import Footer from "../../app/components/Footer";
 
 function BandPage() {
   const router = useRouter();
