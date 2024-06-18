@@ -77,7 +77,11 @@ function Booking() {
       return;
     }
 
-    // const selectedSpotData = availableSpots[selectedSpotIndex]; if (selectedSpotData && totalTickets > selectedSpotData.available) { alert("Ikke nok pladser til rådighed"); return; }
+    const selectedSpotData = availableSpots[selectedSpotIndex];
+    if (selectedSpotData && totalTickets > selectedSpotData.available) {
+      alert("Ikke nok pladser til rådighed");
+      return;
+    }
 
     if (selectedSpot) {
       try {
