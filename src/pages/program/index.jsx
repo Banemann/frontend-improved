@@ -49,10 +49,10 @@ function BandProgram() {
     sun: "Søndag",
   };
 
-  const scenes = [...new Set(Object.keys(schedule))];
-  const filteredSchedule = Object.entries(schedule)
-    .filter(([stage]) => stage === (filterScene || scenes[0]))
-    .sort(([stageA], [stageB]) => stageA.localeCompare(stageB));
+  const scenes = [...new Set(Object.keys(schedule))]; //set = fjerner dubletter, laver unikke scene-navne. object.keys = henter alle keys(scenerne) fra schedule. "..."= spread operator (laver til array)
+  const filteredSchedule = Object.entries(schedule) //returnerer et array af key-value pairs (scene-navn og dage+tid)
+
+    .filter(([stage]) => stage === (filterScene || scenes[0])); //filterer scenerne, så kun den valgte scene vises. Hvis filterScene er falsy(ikke valgt), vises første scene i arrayet.
 
   return (
     <main className={styles.contentContainer}>
@@ -106,10 +106,11 @@ function BandProgram() {
             </div>
           </div>
         ))}
-<Link href="/billetter">
-<button type="submit" className={styles.billetBtn}>
-          Gå til billetter
-        </button></Link>
+        <Link href="/billetter">
+          <button type="submit" className={styles.billetBtn}>
+            Gå til billetter
+          </button>
+        </Link>
       </div>
       <Footer />
     </main>
