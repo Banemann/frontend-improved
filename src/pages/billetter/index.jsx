@@ -78,10 +78,6 @@ function Booking() {
     }
 
     // const selectedSpotData = availableSpots[selectedSpotIndex]; if (selectedSpotData && totalTickets > selectedSpotData.available) { alert("Ikke nok pladser til rådighed"); return; }
-     
-     
-   
-   
 
     if (selectedSpot) {
       try {
@@ -126,6 +122,7 @@ function Booking() {
 
   return (
     <main className={styles.main}>
+      <title>Booking - Billetter</title>
       <Header />
       <form className={styles.formBox} onSubmit={handleSubmit}>
         <h1>BILLETTER</h1>
@@ -134,6 +131,7 @@ function Booking() {
           <div className={styles.ticketCard}>
             <h2>Normal Billet</h2>
             <h3>799 kr</h3>
+            <label htmlFor="regularTicketCount" style={{ display: 'none' }}>Normal Billet Antal</label>
             <input
               className={styles.ticketCounter}
               type="number"
@@ -148,6 +146,7 @@ function Booking() {
           <div className={styles.ticketCard}>
             <h2>VIP Billet</h2>
             <h3>1299 kr</h3>
+            <label htmlFor="vipTicketCount" style={{ display: 'none' }}>VIP Billet Antal</label>
             <input
               className={styles.ticketCounter}
               type="number"
@@ -187,7 +186,7 @@ function Booking() {
           </div>
           <h2>Camping Muligheder</h2>
           <label className={styles.greenCampingBox}>
-            Grøn Camping (249,-){" "}
+            Grøn Camping (249,-)
             <input
               type="checkbox"
               name="greenCamping"
