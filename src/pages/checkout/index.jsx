@@ -13,16 +13,7 @@ function Checkout() {
     expiry: "",
   });
   const router = useRouter();
-  const {
-    regularTickets,
-    vipTickets,
-    selectedSpot,
-    greenCamping,
-    twoPersonTent,
-    threePersonTent,
-    formData: personalFormData,
-    reservationId,
-  } = router.query;
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,16 +24,6 @@ function Checkout() {
     e.preventDefault();
     router.push({
       pathname: "/thanksbye",
-      query: {
-        regularTickets,
-        vipTickets,
-        selectedSpot,
-        greenCamping,
-        twoPersonTent,
-        threePersonTent,
-        formData: personalFormData,
-        reservationId,
-      },
     });
   };
 
