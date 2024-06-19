@@ -14,12 +14,6 @@ function Checkout() {
   });
   const router = useRouter();
   
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     router.push({
@@ -33,7 +27,7 @@ function Checkout() {
       <div className={styles.contentBox}>
         <form onSubmit={handleSubmit}>
           <h1>Betalingsinformation</h1>
-          <CcardFlip formData={formData} handleChange={handleChange} />
+          <CcardFlip formData={formData} />
           <div className={styles.btnBox}>
             <button className={styles.checkoutBtn} type="submit">
               Køb
