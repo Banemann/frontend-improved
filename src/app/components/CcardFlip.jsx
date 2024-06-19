@@ -7,6 +7,11 @@ const CcardFlip = ({ formData, handleChange }) => {
   const handleInputFocus = (e) => {
     const { name } = e.target;
     handleChange({ target: { name: 'focus', value: name } });
+
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    };
   };
 
   return (

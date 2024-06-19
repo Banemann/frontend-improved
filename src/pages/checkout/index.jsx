@@ -5,7 +5,7 @@ import styles from "./Checkout.module.css";
 import CcardFlip from "../../app/components/CcardFlip";
 
 function Checkout() {
-  const [formData, setFormData] = useState({
+  const [formData] = useState({
     firstName: "",
     lastName: "",
     number: "",
